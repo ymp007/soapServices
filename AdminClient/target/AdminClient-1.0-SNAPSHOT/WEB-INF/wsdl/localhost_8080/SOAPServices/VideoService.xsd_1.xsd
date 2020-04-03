@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://services.soapservices.mycompany.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.soapservices.mycompany.com/">
+
+<xs:element name="addVideos" type="tns:addVideos"/>
+
+<xs:element name="addVideosResponse" type="tns:addVideosResponse"/>
+
+<xs:element name="deleteVideos" type="tns:deleteVideos"/>
+
+<xs:element name="deleteVideosResponse" type="tns:deleteVideosResponse"/>
+
+<xs:element name="getVideos" type="tns:getVideos"/>
+
+<xs:element name="getVideosByTitle" type="tns:getVideosByTitle"/>
+
+<xs:element name="getVideosByTitleResponse" type="tns:getVideosByTitleResponse"/>
+
+<xs:element name="getVideosResponse" type="tns:getVideosResponse"/>
+
+<xs:element name="getallVideos" type="tns:getallVideos"/>
+
+<xs:element name="getallVideosResponse" type="tns:getallVideosResponse"/>
+
+<xs:element name="streamingvideos" type="tns:streamingvideos"/>
+
+<xs:element name="updateVideos" type="tns:updateVideos"/>
+
+<xs:element name="updateVideosResponse" type="tns:updateVideosResponse"/>
+
+<xs:complexType name="getVideosByTitle">
+<xs:sequence>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVideosByTitleResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:streamingvideos" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="streamingvideos">
+<xs:sequence>
+<xs:element name="admins" type="xs:string" minOccurs="0"/>
+<xs:element name="category" type="xs:string" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:decimal" minOccurs="0"/>
+<xs:element name="link" type="xs:string" minOccurs="0"/>
+<xs:element name="thumbnail" type="xs:base64Binary" minOccurs="0"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVideos">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVideosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getallVideos">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getallVideosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:streamingvideos" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVideos">
+<xs:sequence>
+<xs:element name="video" type="tns:streamingvideos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVideosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addVideos">
+<xs:sequence>
+<xs:element name="video" type="tns:streamingvideos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addVideosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVideos">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVideosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:streamingvideos" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,9 @@
+com\mycompany\soapservices\exceptions\PreexistingEntityException.class
+com\mycompany\soapservices\handler\VideoHandler.class
+com\mycompany\soapservices\StreamingvideosJpaController.class
+com\mycompany\soapservices\services\VideoService.class
+com\mycompany\soapservices\Streamingvideos.class
+com\mycompany\soapservices\exceptions\IllegalOrphanException.class
+com\mycompany\soapservices\JAXRSConfiguration.class
+com\mycompany\soapservices\exceptions\NonexistentEntityException.class
+com\mycompany\soapservices\resources\JavaEE8Resource.class
